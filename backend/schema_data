@@ -1,0 +1,766 @@
+{
+    "programs": {
+        "columns": [
+            {
+                "name": "id",
+                "type": "INTEGER",
+                "nullable": false
+            },
+            {
+                "name": "prog_name",
+                "type": "VARCHAR(200)",
+                "nullable": false
+            },
+            {
+                "name": "prog_code",
+                "type": "VARCHAR(20)",
+                "nullable": true
+            },
+            {
+                "name": "department",
+                "type": "VARCHAR(100)",
+                "nullable": true
+            },
+            {
+                "name": "duration_years",
+                "type": "INTEGER",
+                "nullable": true
+            },
+            {
+                "name": "created_at",
+                "type": "TIMESTAMP",
+                "nullable": true
+            }
+        ],
+        "primary_keys": [
+            "id"
+        ]
+    },
+    "admission_statistics": {
+        "columns": [
+            {
+                "name": "id",
+                "type": "INTEGER",
+                "nullable": false
+            },
+            {
+                "name": "program_id",
+                "type": "INTEGER",
+                "nullable": true
+            },
+            {
+                "name": "academic_year_id",
+                "type": "INTEGER",
+                "nullable": true
+            },
+            {
+                "name": "academic_year_label",
+                "type": "VARCHAR(20)",
+                "nullable": false
+            },
+            {
+                "name": "sanctioned_intake_n",
+                "type": "INTEGER",
+                "nullable": false
+            },
+            {
+                "name": "students_admitted_n1",
+                "type": "INTEGER",
+                "nullable": true
+            },
+            {
+                "name": "lateral_entry_n2",
+                "type": "INTEGER",
+                "nullable": true
+            },
+            {
+                "name": "separate_division_n3",
+                "type": "INTEGER",
+                "nullable": true
+            },
+            {
+                "name": "supernumerary_n4",
+                "type": "INTEGER",
+                "nullable": true
+            },
+            {
+                "name": "total_admitted",
+                "type": "INTEGER",
+                "nullable": true
+            },
+            {
+                "name": "remarks",
+                "type": "TEXT",
+                "nullable": true
+            },
+            {
+                "name": "created_at",
+                "type": "TIMESTAMP",
+                "nullable": true
+            },
+            {
+                "name": "updated_at",
+                "type": "TIMESTAMP",
+                "nullable": true
+            }
+        ],
+        "primary_keys": [
+            "id"
+        ]
+    },
+    "academic_years": {
+        "columns": [
+            {
+                "name": "id",
+                "type": "INTEGER",
+                "nullable": false
+            },
+            {
+                "name": "year_label",
+                "type": "VARCHAR(20)",
+                "nullable": false
+            },
+            {
+                "name": "is_cay",
+                "type": "BOOLEAN",
+                "nullable": true
+            },
+            {
+                "name": "is_caym1",
+                "type": "BOOLEAN",
+                "nullable": true
+            },
+            {
+                "name": "is_caym2",
+                "type": "BOOLEAN",
+                "nullable": true
+            }
+        ],
+        "primary_keys": [
+            "id"
+        ]
+    },
+    "multiple_entry_exit_statistics": {
+        "columns": [
+            {
+                "name": "id",
+                "type": "INTEGER",
+                "nullable": false
+            },
+            {
+                "name": "program_id",
+                "type": "INTEGER",
+                "nullable": true
+            },
+            {
+                "name": "academic_year_id",
+                "type": "INTEGER",
+                "nullable": true
+            },
+            {
+                "name": "academic_year_label",
+                "type": "VARCHAR(20)",
+                "nullable": false
+            },
+            {
+                "name": "multiple_entry_n5",
+                "type": "INTEGER",
+                "nullable": true
+            },
+            {
+                "name": "multiple_exit_n6",
+                "type": "INTEGER",
+                "nullable": true
+            },
+            {
+                "name": "remarks",
+                "type": "TEXT",
+                "nullable": true
+            },
+            {
+                "name": "created_at",
+                "type": "TIMESTAMP",
+                "nullable": true
+            },
+            {
+                "name": "updated_at",
+                "type": "TIMESTAMP",
+                "nullable": true
+            }
+        ],
+        "primary_keys": [
+            "id"
+        ]
+    },
+    "enrollment_ratio": {
+        "columns": [
+            {
+                "name": "id",
+                "type": "INTEGER",
+                "nullable": false
+            },
+            {
+                "name": "program_id",
+                "type": "INTEGER",
+                "nullable": true
+            },
+            {
+                "name": "academic_year_id",
+                "type": "INTEGER",
+                "nullable": true
+            },
+            {
+                "name": "academic_year_label",
+                "type": "VARCHAR(20)",
+                "nullable": false
+            },
+            {
+                "name": "sanctioned_intake_n",
+                "type": "INTEGER",
+                "nullable": false
+            },
+            {
+                "name": "students_admitted_n1",
+                "type": "INTEGER",
+                "nullable": false
+            },
+            {
+                "name": "supernumerary_n4",
+                "type": "INTEGER",
+                "nullable": false
+            },
+            {
+                "name": "enrollment_ratio_er",
+                "type": "NUMERIC(6, 2)",
+                "nullable": true
+            },
+            {
+                "name": "er_points",
+                "type": "NUMERIC(5, 2)",
+                "nullable": true
+            },
+            {
+                "name": "remarks",
+                "type": "TEXT",
+                "nullable": true
+            },
+            {
+                "name": "created_at",
+                "type": "TIMESTAMP",
+                "nullable": true
+            },
+            {
+                "name": "updated_at",
+                "type": "TIMESTAMP",
+                "nullable": true
+            }
+        ],
+        "primary_keys": [
+            "id"
+        ]
+    },
+    "graduation_statistics": {
+        "columns": [
+            {
+                "name": "id",
+                "type": "INTEGER",
+                "nullable": false
+            },
+            {
+                "name": "program_id",
+                "type": "INTEGER",
+                "nullable": true
+            },
+            {
+                "name": "batch_entry_year",
+                "type": "INTEGER",
+                "nullable": false
+            },
+            {
+                "name": "batch_label",
+                "type": "VARCHAR(20)",
+                "nullable": false
+            },
+            {
+                "name": "is_lyg",
+                "type": "BOOLEAN",
+                "nullable": true
+            },
+            {
+                "name": "is_lygm1",
+                "type": "BOOLEAN",
+                "nullable": true
+            },
+            {
+                "name": "is_lygm2",
+                "type": "BOOLEAN",
+                "nullable": true
+            },
+            {
+                "name": "total_admitted_a",
+                "type": "INTEGER",
+                "nullable": true
+            },
+            {
+                "name": "graduated_stipulated_b",
+                "type": "INTEGER",
+                "nullable": true
+            },
+            {
+                "name": "success_rate_sr",
+                "type": "NUMERIC(5, 2)",
+                "nullable": true
+            },
+            {
+                "name": "remarks",
+                "type": "TEXT",
+                "nullable": true
+            },
+            {
+                "name": "created_at",
+                "type": "TIMESTAMP",
+                "nullable": true
+            },
+            {
+                "name": "updated_at",
+                "type": "TIMESTAMP",
+                "nullable": true
+            }
+        ],
+        "primary_keys": [
+            "id"
+        ]
+    },
+    "success_rate": {
+        "columns": [
+            {
+                "name": "id",
+                "type": "INTEGER",
+                "nullable": false
+            },
+            {
+                "name": "program_id",
+                "type": "INTEGER",
+                "nullable": true
+            },
+            {
+                "name": "graduation_stat_id",
+                "type": "INTEGER",
+                "nullable": true
+            },
+            {
+                "name": "batch_label",
+                "type": "VARCHAR(20)",
+                "nullable": false
+            },
+            {
+                "name": "total_admitted_a",
+                "type": "INTEGER",
+                "nullable": false
+            },
+            {
+                "name": "graduated_stipulated_b",
+                "type": "INTEGER",
+                "nullable": false
+            },
+            {
+                "name": "sr_percentage",
+                "type": "NUMERIC(5, 2)",
+                "nullable": true
+            },
+            {
+                "name": "average_sr",
+                "type": "NUMERIC(5, 2)",
+                "nullable": true
+            },
+            {
+                "name": "sr_points",
+                "type": "NUMERIC(5, 2)",
+                "nullable": true
+            },
+            {
+                "name": "remarks",
+                "type": "TEXT",
+                "nullable": true
+            },
+            {
+                "name": "created_at",
+                "type": "TIMESTAMP",
+                "nullable": true
+            },
+            {
+                "name": "updated_at",
+                "type": "TIMESTAMP",
+                "nullable": true
+            }
+        ],
+        "primary_keys": [
+            "id"
+        ]
+    },
+    "academic_performance_year1": {
+        "columns": [
+            {
+                "name": "id",
+                "type": "INTEGER",
+                "nullable": false
+            },
+            {
+                "name": "program_id",
+                "type": "INTEGER",
+                "nullable": true
+            },
+            {
+                "name": "academic_year_id",
+                "type": "INTEGER",
+                "nullable": true
+            },
+            {
+                "name": "academic_year_label",
+                "type": "VARCHAR(20)",
+                "nullable": false
+            },
+            {
+                "name": "semester_number",
+                "type": "INTEGER",
+                "nullable": false
+            },
+            {
+                "name": "appeared_students",
+                "type": "INTEGER",
+                "nullable": false
+            },
+            {
+                "name": "passed_students",
+                "type": "INTEGER",
+                "nullable": false
+            },
+            {
+                "name": "mean_gpa",
+                "type": "NUMERIC(4, 2)",
+                "nullable": true
+            },
+            {
+                "name": "api_value",
+                "type": "NUMERIC(6, 3)",
+                "nullable": true
+            },
+            {
+                "name": "api_points",
+                "type": "NUMERIC(5, 2)",
+                "nullable": true
+            },
+            {
+                "name": "remarks",
+                "type": "TEXT",
+                "nullable": true
+            },
+            {
+                "name": "created_at",
+                "type": "TIMESTAMP",
+                "nullable": true
+            },
+            {
+                "name": "updated_at",
+                "type": "TIMESTAMP",
+                "nullable": true
+            }
+        ],
+        "primary_keys": [
+            "id"
+        ]
+    },
+    "academic_performance_year2": {
+        "columns": [
+            {
+                "name": "id",
+                "type": "INTEGER",
+                "nullable": false
+            },
+            {
+                "name": "program_id",
+                "type": "INTEGER",
+                "nullable": true
+            },
+            {
+                "name": "academic_year_id",
+                "type": "INTEGER",
+                "nullable": true
+            },
+            {
+                "name": "academic_year_label",
+                "type": "VARCHAR(20)",
+                "nullable": false
+            },
+            {
+                "name": "semester_number",
+                "type": "INTEGER",
+                "nullable": false
+            },
+            {
+                "name": "appeared_students",
+                "type": "INTEGER",
+                "nullable": false
+            },
+            {
+                "name": "passed_students",
+                "type": "INTEGER",
+                "nullable": false
+            },
+            {
+                "name": "mean_gpa",
+                "type": "NUMERIC(4, 2)",
+                "nullable": true
+            },
+            {
+                "name": "api_value",
+                "type": "NUMERIC(6, 3)",
+                "nullable": true
+            },
+            {
+                "name": "api_points",
+                "type": "NUMERIC(5, 2)",
+                "nullable": true
+            },
+            {
+                "name": "remarks",
+                "type": "TEXT",
+                "nullable": true
+            },
+            {
+                "name": "created_at",
+                "type": "TIMESTAMP",
+                "nullable": true
+            },
+            {
+                "name": "updated_at",
+                "type": "TIMESTAMP",
+                "nullable": true
+            }
+        ],
+        "primary_keys": [
+            "id"
+        ]
+    },
+    "academic_performance_year3": {
+        "columns": [
+            {
+                "name": "id",
+                "type": "INTEGER",
+                "nullable": false
+            },
+            {
+                "name": "program_id",
+                "type": "INTEGER",
+                "nullable": true
+            },
+            {
+                "name": "academic_year_id",
+                "type": "INTEGER",
+                "nullable": true
+            },
+            {
+                "name": "academic_year_label",
+                "type": "VARCHAR(20)",
+                "nullable": false
+            },
+            {
+                "name": "semester_number",
+                "type": "INTEGER",
+                "nullable": false
+            },
+            {
+                "name": "appeared_students",
+                "type": "INTEGER",
+                "nullable": false
+            },
+            {
+                "name": "passed_students",
+                "type": "INTEGER",
+                "nullable": false
+            },
+            {
+                "name": "mean_gpa",
+                "type": "NUMERIC(4, 2)",
+                "nullable": true
+            },
+            {
+                "name": "api_value",
+                "type": "NUMERIC(6, 3)",
+                "nullable": true
+            },
+            {
+                "name": "api_points",
+                "type": "NUMERIC(5, 2)",
+                "nullable": true
+            },
+            {
+                "name": "remarks",
+                "type": "TEXT",
+                "nullable": true
+            },
+            {
+                "name": "created_at",
+                "type": "TIMESTAMP",
+                "nullable": true
+            },
+            {
+                "name": "updated_at",
+                "type": "TIMESTAMP",
+                "nullable": true
+            }
+        ],
+        "primary_keys": [
+            "id"
+        ]
+    },
+    "placement_statistics": {
+        "columns": [
+            {
+                "name": "id",
+                "type": "INTEGER",
+                "nullable": false
+            },
+            {
+                "name": "program_id",
+                "type": "INTEGER",
+                "nullable": true
+            },
+            {
+                "name": "academic_year_id",
+                "type": "INTEGER",
+                "nullable": true
+            },
+            {
+                "name": "academic_year_label",
+                "type": "VARCHAR(20)",
+                "nullable": false
+            },
+            {
+                "name": "final_year_students_fs",
+                "type": "INTEGER",
+                "nullable": false
+            },
+            {
+                "name": "placed_x",
+                "type": "INTEGER",
+                "nullable": true
+            },
+            {
+                "name": "higher_studies_y",
+                "type": "INTEGER",
+                "nullable": true
+            },
+            {
+                "name": "entrepreneurship_z",
+                "type": "INTEGER",
+                "nullable": true
+            },
+            {
+                "name": "placement_percentage",
+                "type": "NUMERIC(5, 2)",
+                "nullable": true
+            },
+            {
+                "name": "average_placement_p",
+                "type": "NUMERIC(5, 2)",
+                "nullable": true
+            },
+            {
+                "name": "placement_index_points",
+                "type": "NUMERIC(5, 2)",
+                "nullable": true
+            },
+            {
+                "name": "remarks",
+                "type": "TEXT",
+                "nullable": true
+            },
+            {
+                "name": "created_at",
+                "type": "TIMESTAMP",
+                "nullable": true
+            },
+            {
+                "name": "updated_at",
+                "type": "TIMESTAMP",
+                "nullable": true
+            }
+        ],
+        "primary_keys": [
+            "id"
+        ]
+    },
+    "department_publications": {
+        "columns": [
+            {
+                "name": "id",
+                "type": "INTEGER",
+                "nullable": false
+            },
+            {
+                "name": "program_id",
+                "type": "INTEGER",
+                "nullable": true
+            },
+            {
+                "name": "academic_year_id",
+                "type": "INTEGER",
+                "nullable": true
+            },
+            {
+                "name": "academic_year_label",
+                "type": "VARCHAR(20)",
+                "nullable": false
+            },
+            {
+                "name": "journal_name",
+                "type": "VARCHAR(300)",
+                "nullable": false
+            },
+            {
+                "name": "editor_name",
+                "type": "VARCHAR(200)",
+                "nullable": true
+            },
+            {
+                "name": "students_involved",
+                "type": "TEXT",
+                "nullable": true
+            },
+            {
+                "name": "no_of_issues",
+                "type": "INTEGER",
+                "nullable": true
+            },
+            {
+                "name": "publication_type",
+                "type": "VARCHAR(10)",
+                "nullable": true
+            },
+            {
+                "name": "department",
+                "type": "VARCHAR(100)",
+                "nullable": true
+            },
+            {
+                "name": "remarks",
+                "type": "TEXT",
+                "nullable": true
+            },
+            {
+                "name": "created_at",
+                "type": "TIMESTAMP",
+                "nullable": true
+            },
+            {
+                "name": "updated_at",
+                "type": "TIMESTAMP",
+                "nullable": true
+            }
+        ],
+        "primary_keys": [
+            "id"
+        ]
+    }
+}
